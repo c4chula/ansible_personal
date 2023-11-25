@@ -28,3 +28,10 @@
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
+
+  - name: set nvim config
+    copy:
+      src: .dotfiles/nvim
+      dest: /home/c4chula/.config/nvim
+      owner: c4chula
+      group: c4chula
