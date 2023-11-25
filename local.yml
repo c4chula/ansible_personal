@@ -18,13 +18,13 @@
       group: root
 
   - name: set wallpaper
-    become_user: c4chula 
+    become_user: user 
     dconf:
       key: "/org/gnome/desktop/background/picture-uri-dark"
       value: "'file:///usr/share/backgrounds/dark-wallpaper.jpg'"
 
   - name: set wallpaper position
-    become_user: c4chula
+    become_user: user
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
@@ -32,6 +32,6 @@
   - name: set nvim config
     copy:
       src: .dotfiles/nvim
-      dest: /home/c4chula/.config/nvim
-      owner: c4chula
-      group: c4chula
+      dest: /home/user/.config/nvim
+      owner: user
+      group: user
