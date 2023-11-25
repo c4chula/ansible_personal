@@ -32,6 +32,6 @@
   - name: set nvim config
     copy:
       src: .dotfiles/nvim
-      dest: /home/user/.config/nvim
+      dest: /home/user/.config/
       owner: user
       group: user
