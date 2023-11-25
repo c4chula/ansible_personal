@@ -18,11 +18,13 @@
       group: root
 
   - name: set wallpaper
+    become_user: c4chula 
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
 
   - name: set wallpaper position
+    become_user: c4chula
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
